@@ -1,6 +1,19 @@
+
 html {
   display: flex;
   justify-content: center;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(/assets/img/background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  height: 800px;
+  width: 589px;
 }
 
 svg {
@@ -35,16 +48,21 @@ svg {
 }
 .section__moon {
   width: 100px;
+  animation: floatAnimation 3s infinite alternate ease-in-out;
 }
 .section__star--big {
   width: 30px;
   margin-bottom: 85px;
   margin-left: -12px;
+  animation: flicker 1s infinite alternate;
+  opacity: 0;
 }
 .section__star--small {
   width: 20px;
   margin-bottom: 60px;
   margin-left: -5px;
+  animation: flicker2 1s infinite alternate;
+  opacity: 0;
 }
 
 .car {
@@ -216,6 +234,7 @@ svg {
   width: 100%;
 }
 
+
 @media screen and (min-width: 900px) {
   .poster {
     max-width: 900px;
@@ -260,6 +279,32 @@ svg {
     margin-top: -50px;
   }
   .earth__paragraph {
-    font-size: 0.5rem;
+    font-size: 0.5rem;}
+  }
+  
+
+@keyframes floatAnimation {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  100% {
+    transform: translate(-50%, -20px);
+  }
+}
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flicker2 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+
   }
 }/*# sourceMappingURL=style.css.map */

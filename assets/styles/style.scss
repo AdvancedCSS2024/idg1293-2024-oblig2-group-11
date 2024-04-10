@@ -1,13 +1,27 @@
 // USE THIS FILE TO CREATE THE LAYOUT AND SPECIFIC RULES FOR SCREENSHOTS 1 and 2
+
 html{
     display: flex;
     justify-content: center;
 }
 
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(/assets/img/background.svg);
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+    max-width: fit-content;
+    height: 800px;
+    width: 589px;
+}
+
 svg{
     max-width: 100px;
 }
-
 .heading{
     margin-left: 40px;
 
@@ -41,17 +55,22 @@ svg{
     } 
     &__moon{
         width: 100px; 
+        animation: floatAnimation 3s infinite alternate ease-in-out;
     }
     &__star--big{
         width: 30px;
         margin-bottom: 85px;
         margin-left: -12px;
+        animation: flicker 1s infinite alternate;
+        opacity: 0; 
         
     }
     &__star--small{
         width: 20px;
         margin-bottom: 60px; 
         margin-left: -5px;
+        animation: flicker2 1s infinite alternate;
+        opacity: 0;
     }
 }
 
@@ -246,6 +265,7 @@ svg{
 }
 
 
+
 // Media queries (making it responsive)
 
 $small: 500px;
@@ -312,4 +332,30 @@ $medium: 900px;
 }
 
 }
+
+
+@keyframes floatAnimation {
+    0% {
+      transform: translate(-50%, 0);
+    }
+    100% {
+      transform: translate(-50%, -20px);
+    }
+  }
+  @keyframes flicker {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes flicker2 {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 
