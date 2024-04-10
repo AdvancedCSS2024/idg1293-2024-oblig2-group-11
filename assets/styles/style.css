@@ -1,3 +1,8 @@
+
+html {
+  display: flex;
+  justify-content: center;
+
 body {
   margin: 0;
   padding: 0;
@@ -61,18 +66,19 @@ svg {
 }
 
 .car {
-  transform: rotate(-25deg);
   margin: 30px;
 }
 .car__paragraph {
   padding: 0px;
   font-size: 0.8rem;
+  transform: rotate(-20deg);
 }
 .car__paragraph--big {
   font-size: 3rem;
 }
 .car__svg {
   width: 90px;
+  transform: none;
 }
 
 .figures {
@@ -168,6 +174,7 @@ svg {
   display: flex;
   font-size: 0.3rem;
   font-weight: bold;
+  justify-content: center;
 }
 .earth__paragraph-1 {
   margin-left: 55px;
@@ -179,22 +186,25 @@ svg {
   max-width: 30px;
 }
 .earth__paragraph-h2 {
-  width: 100%;
+  min-width: 150px;
   margin-top: 30px;
-  margin-left: -50px;
+  margin-left: -60px;
   font-size: 0.8rem;
 }
 .earth__paragraph-3 {
-  margin-top: 80px;
-  margin-left: -198px;
-  max-width: 40px;
+  margin-top: 70px;
+  width: 40px;
   font-size: 0.26rem;
+  margin-left: -125px;
 }
 .earth__paragraph-4 {
-  margin-left: 330px;
+  margin-left: 140px;
+  max-width: 30px;
 }
 .earth__paragraph-5 {
-  margin-bottom: 0px;
+  margin-top: 70px;
+  max-width: 35px;
+  margin-left: -30px;
 }
 
 .paragraph {
@@ -224,6 +234,55 @@ svg {
   width: 100%;
 }
 
+
+@media screen and (min-width: 900px) {
+  .poster {
+    max-width: 900px;
+    margin: 20px 100px;
+  }
+  .heading {
+    margin: 40px 0px;
+  }
+  .section__paragraph {
+    min-width: 270px;
+  }
+  .car__paragraph {
+    padding: 10px 30px 20px 100px;
+    margin-top: -110px;
+    margin: 30px;
+  }
+  .figures {
+    max-width: 500px;
+    margin: 0px 100px;
+    margin-bottom: -26px;
+  }
+  .figures__svg1 {
+    width: 25px;
+  }
+  .figures__svg2 {
+    width: 40px;
+  }
+  .figures__svg3 {
+    width: 60px;
+  }
+  .people {
+    padding: 30px;
+  }
+  .people__svg1, .people__svg2, .people__svg3 {
+    width: 200px;
+  }
+  .people__svg1, .people__svg3 {
+    margin-bottom: -60px;
+  }
+  .earth__svg {
+    min-width: 600px;
+    margin-top: -50px;
+  }
+  .earth__paragraph {
+    font-size: 0.5rem;}
+  }
+  
+
 @keyframes floatAnimation {
   0% {
     transform: translate(-50%, 0);
@@ -246,5 +305,6 @@ svg {
   }
   100% {
     opacity: 0;
+
   }
 }/*# sourceMappingURL=style.css.map */
