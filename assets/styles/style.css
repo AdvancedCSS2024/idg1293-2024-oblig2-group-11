@@ -43,12 +43,14 @@ body {
 .section__paragraph {
   max-width: 150px;
   color: white;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin-right: 40px;
+  margin-top: 40px;
 }
 .section__moon {
-  width: 100px;
+  width: 90px;
   margin-right: -45px;
+  height: 100px;
 }
 .section__star--big {
   width: 30px;
@@ -56,6 +58,7 @@ body {
   margin-left: -10px;
   opacity: 1;
   animation: flicker 3s infinite alternate;
+  overflow: visible;
 }
 .section__star--small {
   width: 20px;
@@ -63,6 +66,10 @@ body {
   margin-left: -5px;
   opacity: 1;
   animation: flicker 1s infinite alternate;
+  overflow: visible;
+}
+.section__moonstars {
+  margin-top: -30px;
 }
 
 .car {
@@ -260,16 +267,27 @@ body {
     max-width: 900px;
     margin: 20px 100px;
   }
+  .section__moonstars {
+    margin-top: -10px;
+    overflow: none;
+  }
+  .section__moon {
+    width: 100px;
+  }
   .heading {
     margin: 20px 0px 0px 80px;
   }
   .section__paragraph {
     min-width: 270px;
+    margin-top: 20px;
   }
   .car__paragraph {
     padding: 0px 20px 5px 20px;
     margin-top: 10px;
     transform: rotate(-20deg);
+  }
+  .car__svg {
+    width: 110px;
   }
   .figures {
     max-width: 500px;
