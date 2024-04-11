@@ -4,8 +4,8 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  margin: 10px;
+  padding: 0px;
   background-image: url(/assets/img/background.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -16,12 +16,8 @@ body {
   width: 900px;
 }
 
-svg {
-  max-width: 100px;
-}
-
 .heading {
-  margin-left: 40px;
+  margin-left: 50px;
 }
 .heading__h1 {
   color: rgba(3, 3, 167, 0.822);
@@ -34,6 +30,7 @@ svg {
 }
 .heading__paragraph {
   color: black;
+  font-size: 0.9rem;
   max-width: 220px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
@@ -46,6 +43,8 @@ svg {
 .section__paragraph {
   max-width: 150px;
   color: white;
+  font-size: 0.9rem;
+  margin-right: 40px;
 }
 .section__moon {
   width: 100px;
@@ -69,17 +68,20 @@ svg {
 
 .car {
   margin: 30px;
+  margin-top: 0px;
+  padding-left: 40px;
 }
 .car__paragraph {
   padding: 0px;
   font-size: 0.8rem;
-  transform: rotate(-20deg);
+  transform: rotate(-10deg);
 }
 .car__paragraph--big {
   font-size: 3rem;
 }
 .car__svg {
   width: 90px;
+  max-width: 100px;
 }
 
 .figures {
@@ -87,6 +89,8 @@ svg {
   justify-content: space-around;
   padding: 0px 20px 0px 30px;
   z-index: -2;
+  margin: 10px 50px 10px 20px;
+  max-width: 400px;
 }
 .figures__svg1 {
   width: 15px;
@@ -150,10 +154,12 @@ svg {
   padding: 10px;
   width: 90px;
   margin-bottom: -20px;
+  margin-right: 15px;
 }
 .people__svg2 {
-  width: 90px;
+  width: 70px;
   margin-left: 10px;
+  margin-bottom: 25px;
 }
 .people__svg3 {
   width: 90px;
@@ -167,11 +173,12 @@ svg {
 }
 .earth__svg {
   min-width: 450px;
-  margin-top: -40px;
+  max-width: 450px;
+  margin-top: -35px;
   z-index: -4;
 }
 .earth__paragraph {
-  margin-top: -395px;
+  margin-top: -390px;
   display: flex;
   font-size: 0.3rem;
   font-weight: bold;
@@ -190,11 +197,11 @@ svg {
   min-width: 150px;
   margin-top: 30px;
   margin-left: -60px;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 .earth__paragraph-3 {
   margin-top: 70px;
-  width: 40px;
+  width: 20px;
   font-size: 0.26rem;
   margin-left: -125px;
 }
@@ -210,11 +217,16 @@ svg {
 
 .footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  width: 100%;
   background-color: rgba(31, 96, 177, 0.822);
   font-size: 0.4rem;
+  width: 100%;
   color: white;
+  padding: 5px;
+}
+.footer__svg1 {
+  max-width: 100px;
 }
 .footer__svg2 {
   max-width: 1px;
@@ -230,11 +242,20 @@ svg {
 .end__paragraph {
   font-size: 0.3rem;
   background-color: white;
-  padding: 0px;
+  padding: 0px 60px;
   margin: 0px;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 375px) {
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    font-size: 0.4rem;
+  }
+}
+@media screen and (min-width: 600px) {
   .poster {
     max-width: 900px;
     margin: 20px 100px;
@@ -246,8 +267,9 @@ svg {
     min-width: 270px;
   }
   .car__paragraph {
-    padding: 0px 30px 5px 50px;
-    margin-top: -30px;
+    padding: 0px 20px 5px 20px;
+    margin-top: 10px;
+    transform: rotate(-20deg);
   }
   .figures {
     max-width: 500px;
@@ -273,18 +295,18 @@ svg {
     padding: 30px;
   }
   .people__svg1, .people__svg2, .people__svg3 {
-    min-width: 80px;
+    min-width: 70px;
     max-width: 100px;
   }
   .people__svg1, .people__svg3 {
     margin-bottom: -25px;
   }
   .earth__svg {
-    min-width: 550px;
+    min-width: 555px;
     margin-top: -70px;
   }
   .earth__paragraph {
-    margin-top: -500px;
+    margin-top: -503px;
     font-size: 0.5rem;
   }
   .earth__paragraph-1 {
@@ -294,16 +316,18 @@ svg {
   }
   .earth__paragraph-2 {
     max-width: 65px;
-    padding-top: 10px;
+    padding-top: 8px;
+    padding-right: 2px;
   }
   .earth__paragraph-h2 {
     padding-top: 30px;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .earth__paragraph-3 {
-    padding-top: 40px;
-    font-size: 0.45rem;
-    margin-left: -155px;
+    padding-top: 37px;
+    font-size: 0.4rem;
+    margin-left: -142px;
+    width: 26px;
   }
   .earth__paragraph-4 {
     max-width: 45px;
@@ -321,10 +345,14 @@ svg {
   }
   .end__paragraph {
     padding: 0px 20px;
+    font-size: 0.455rem;
   }
   .footer {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    height: 30px;
+    font-size: 0.55rem;
   }
 }
 @keyframes floatAnimation {
