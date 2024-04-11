@@ -57,23 +57,22 @@ body{
     } 
     &__moon{
         width: 100px; 
-        animation: floatAnimation 3s infinite alternate ease-in-out;
         margin-right: -45px;
     }
     &__star--big{
         width: 30px;
         margin-bottom: 85px;
         margin-left: -10px;
-        animation: flicker 1s infinite alternate;
-        opacity: 0; 
+        opacity: 1; 
+        animation: flicker 3s infinite alternate;
         
     }
     &__star--small{
         width: 20px;
         margin-bottom: 60px; 
         margin-left: -5px;
-        animation: flicker2 1s infinite alternate;
-        opacity: 0;
+        opacity: 1;
+        animation: flicker 1s infinite alternate;
     }
 }
 
@@ -104,6 +103,7 @@ body{
     z-index: -2;
     margin: 10px 50px 10px 20px;
     max-width: 400px;
+    animation: shakingAnimation 2s infinite alternate ease-in-out;
 
     &__svg1{
         width: 15px;
@@ -408,28 +408,18 @@ $large: 600px;
 
 }
 
-
-@keyframes floatAnimation {
+@keyframes flicker {
     0% {
-      transform: translate(-50%, 0);
+        opacity: 0;
     }
     100% {
-      transform: translate(-50%, -20px);
+        opacity: 100;
     }
-  }
-  @keyframes flicker {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @keyframes flicker2 {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
+}
+@keyframes shakingAnimation {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(2deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-2deg); }
+    100% { transform: rotate(0deg); }
   }

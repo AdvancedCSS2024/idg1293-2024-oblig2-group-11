@@ -48,22 +48,21 @@ body {
 }
 .section__moon {
   width: 100px;
-  animation: floatAnimation 3s infinite alternate ease-in-out;
   margin-right: -45px;
 }
 .section__star--big {
   width: 30px;
   margin-bottom: 85px;
   margin-left: -10px;
-  animation: flicker 1s infinite alternate;
-  opacity: 0;
+  opacity: 1;
+  animation: flicker 3s infinite alternate;
 }
 .section__star--small {
   width: 20px;
   margin-bottom: 60px;
   margin-left: -5px;
-  animation: flicker2 1s infinite alternate;
-  opacity: 0;
+  opacity: 1;
+  animation: flicker 1s infinite alternate;
 }
 
 .car {
@@ -91,6 +90,7 @@ body {
   z-index: -2;
   margin: 10px 50px 10px 20px;
   max-width: 400px;
+  animation: shakingAnimation 2s infinite alternate ease-in-out;
 }
 .figures__svg1 {
   width: 15px;
@@ -355,27 +355,28 @@ body {
     font-size: 0.55rem;
   }
 }
-@keyframes floatAnimation {
-  0% {
-    transform: translate(-50%, 0);
-  }
-  100% {
-    transform: translate(-50%, -20px);
-  }
-}
 @keyframes flicker {
   0% {
     opacity: 0;
   }
   100% {
-    opacity: 1;
+    opacity: 100;
   }
 }
-@keyframes flicker2 {
+@keyframes shakingAnimation {
   0% {
-    opacity: 1;
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(0eg);
+  }
+  75% {
+    transform: rotate(-2deg);
   }
   100% {
-    opacity: 0;
+    transform: rotate(0deg);
   }
 }/*# sourceMappingURL=style.css.map */
