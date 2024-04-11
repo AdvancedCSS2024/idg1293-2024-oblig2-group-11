@@ -33,3 +33,5 @@ Car: We wanted the car to feel like it floats in space. To act like it was takin
 Green figures: Because all the other animations were at the top of the poster, we wanted to even it out and make some of the bottom elements more interesting. Therefore, we added a @keyframe animation to css and made the green figures shake slightly. The figures resemble co2 clouds with angry faces and the shaking just made it even more clear that they are angry and not friendly. We think the animation succeeds to clarifying the message.
 
 The animations make the poster feel more alive and interesting. We think the animations contributes to emphasize the message.
+
+Github page link: https://advancedcss2024.github.io/idg1293-2024-oblig2-group-11/
